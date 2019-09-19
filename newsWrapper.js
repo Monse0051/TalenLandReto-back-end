@@ -16,7 +16,7 @@ let firebaseConfig = {
 
 const API_KEY = "defd605d076d431b899e238f871195c3";
 
-function getNews(){
+function getTodayNews(){
     let today = getDate()
     const options = {
         uri: `https://newsapi.org/v2/everything?q=bitcoin&from=${today}&apiKey=${API_KEY}`,
@@ -37,6 +37,7 @@ function getDate(){
     let dd = String(today.getDate()).padStart(2, '0');
     let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     let yyyy = today.getFullYear();
+    
     today = mm + '-' + dd + '-' + yyyy;
 
     return today;
@@ -47,7 +48,7 @@ function saveTofirebase(news){
     let setDoc = db.collection('News').doc(`Bitcoins_${getDate()}`).set(news);
 }
 
-function getOneNew(){
+function getRandomNew(){
 
    return db.collection('News').doc(`Bitcoins_${getDate()}`).get()
   .then((newsRef) => {
@@ -76,4 +77,4 @@ function getRandom(max) {
   }
 
 
-module.exports = getOneNew;
+module.exports = {getTodayNews, getRandomNew};
