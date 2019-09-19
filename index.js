@@ -15,6 +15,6 @@ app.get('/', function (req, res) {
     getRandomNew().then(article => {
         res.send(article);
     });
-  })
+  });
    
-  app.listen(3000)
+app.listen(process.env.PORT || 8080);
