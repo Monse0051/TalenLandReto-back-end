@@ -1,0 +1,32 @@
+{
+  "name": "talenlandreto-back-end",
+  "version": "1.0.0",
+  "description": "Wrapper of News API as a Backend",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^6.6.1",
+    "request-promise": "^4.2.4",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monse0051/TalenLandReto-back-end.git"
+  },
+  "keywords": [
+    "js",
+    "backend"
+  ],
+  "author": "Monsserrath Vargas",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Monse0051/TalenLandReto-back-end/issues"
+  },
+  "homepage": "https://github.com/Monse0051/TalenLandReto-back-end#readme"
+}
