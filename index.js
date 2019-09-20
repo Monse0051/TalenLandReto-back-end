@@ -7,8 +7,10 @@ app.use(cors());
 
 const DAY_MILISECONDS = 1000 * 60 * 60 * 24;
 const HALF_DAY_MILISECONDS = DAY_MILISECONDS/2;
+const HOUR_MILLISECONDS = DAY_MILISECONDS/24;
 
-setInterval(getTodayNews, HALF_DAY_MILISECONDS);
+getTodayNews();
+setInterval(getTodayNews, HOUR_MILLISECONDS);
 
 app.get('/', function (req, res) {
 

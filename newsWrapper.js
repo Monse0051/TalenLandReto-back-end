@@ -57,13 +57,13 @@ function getRandomNew(){
         console.log("ERROR: Could not found saved news!");
         newArticle = {error: "Could not found news"};
     } else {
-        console.log("printing news...");
+        console.log("DEBUG_MSG: Getting random new...");
         let newsRaw = newsRef.data();
         let articles = newsRaw.articles;
         let totalArticles = articles.length;
         const randomIndex = getRandom(totalArticles)
         newArticle = articles[randomIndex];
-        console.log(newArticle);
+        //console.log(newArticle);
     }
     return newArticle;
   })
